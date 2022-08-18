@@ -1,0 +1,11 @@
+{
+  "event_slug": "party",
+  "details": "event",
+  "address": "The moon, outerspace",
+  "html_date": "Whenever <strong>you</strong> have time",
+  "html_description": "<p>Please attend</p>",
+  "html_gift_message": "I value your presence above your presents.",
+  "title": "My awesome party",
+  "start": "2022-01-01T10:00:00",
+  "end": "2022-01-01T12:00:00"
+}
