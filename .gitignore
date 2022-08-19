@@ -116,5 +116,6 @@ src/testkees.html
 __pycache__
 out.html
 scripts/*.csv
+scripts/*.json
 .DS_Store
 scripts/actual_add_attendees_to_dynamo.py
