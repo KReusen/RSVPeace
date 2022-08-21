@@ -38,4 +38,4 @@ def handler(event: dict, context: object):
         return render_rsvp_page(rsvpeace_event, attendee)
 
     if api_gw_event.http_method == "POST":
-        return process_form_post(api_gw_event, repo)
+        return process_form_post(api_gw_event.payload, repo)

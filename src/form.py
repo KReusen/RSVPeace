@@ -1,11 +1,11 @@
 import json
 
-from models import RSVP, APIGatewayEvent
+from models import RSVP
 from repo import RSVPeaceRepo
 
 
-def process_form_post(api_gw_event: APIGatewayEvent, repo: RSVPeaceRepo) -> dict:
-    rsvp = RSVP.from_dict(api_gw_event.payload)
+def process_form_post(payload: dict, repo: RSVPeaceRepo) -> dict:
+    rsvp = RSVP.from_dict(payload)
     repo.update_rsvp(rsvp)
 
     return {
