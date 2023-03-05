@@ -88,3 +88,16 @@ class Attendee:
     identifier: str
     nickname: str
     rsvp: RSVP
+
+
+@dataclass
+class DisplayEventAndAttendee:
+    event: RSVPeaceEvent
+    attendee: Attendee
+
+    @property
+    def html_description(self) -> str:
+        """Provide an html description that can interpolate strings from event and attendee"""
+        return self.event.html_description.format(
+            event=self.event, attendee=self.attendee
+        )

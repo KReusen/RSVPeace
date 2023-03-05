@@ -1,4 +1,4 @@
-from models import APIGatewayEvent, Attendee, RSVPeaceEvent
+from models import APIGatewayEvent, Attendee, DisplayEventAndAttendee, RSVPeaceEvent
 
 
 def render_404() -> dict:
@@ -16,10 +16,12 @@ def render_rsvp_page(event: RSVPeaceEvent, attendee: Attendee) -> dict:
     with open("templates/index.html") as fh:
         index = fh.read()
 
+    data = DisplayEventAndAttendee(event=event, attendee=attendee)
+
     return {
         "statusCode": 200,
         "headers": {"Content-Type": "text/html"},
-        "body": index.format(event=event, attendee=attendee),
+        "body": index.format(data=data),
     }
 
 
