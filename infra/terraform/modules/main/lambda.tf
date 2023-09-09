@@ -11,7 +11,7 @@ resource "aws_lambda_function" "rsvpeace_handler" {
   role             = aws_iam_role.lambda_iam.arn
   handler          = "handler.handler"
   source_code_hash = data.archive_file.zipped_lambda_code.output_base64sha256
-  runtime          = "python3.9"
+  runtime          = "python3.11"
   memory_size      = 128
   timeout          = 5
   architectures    = ["arm64"]

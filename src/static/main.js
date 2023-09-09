@@ -23,7 +23,7 @@ function show_success_message() {
 </div>`;
   setTimeout(function () {
     bootstrap.Alert.getOrCreateInstance(
-      document.querySelector("#success-alert")
+      document.querySelector("#success-alert"),
     ).close();
   }, 5000);
 }
@@ -36,7 +36,7 @@ function show_error_message() {
 </div>`;
   setTimeout(function () {
     bootstrap.Alert.getOrCreateInstance(
-      document.querySelector("#failure-alert")
+      document.querySelector("#failure-alert"),
     ).close();
   }, 5000);
 }
